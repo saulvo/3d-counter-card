@@ -1,0 +1,28 @@
+$size: 15px;
+$layer-gap: 20px;
+$primary-color: #ff00b1;
+$skills: 220, 170, 150, 140, 100, 130, 85;
+
+@mixin flex($align: start, $justify: start) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin box($width: auto, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin center {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bgCaro($bg, $bgline) {
+  background-color: $bg;
+  background-image: linear-gradient($bgline 1px, transparent 1px),
+    linear-gradient(90deg, $bgline 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+}
